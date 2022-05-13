@@ -1,0 +1,536 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*ESTILOS html*/
+
+
+.contenedor{
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:"header"
+                        "main"
+                        "footer";
+}
+
+
+header{
+    grid-area: header;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+.titulo{
+    text-align: center;
+    margin: 8px;
+    font-size: 50px;
+    text-decoration: underline;
+    padding: 2px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
+    
+}
+nav ul :hover{
+    color: #a73030;
+    font-weight: bold;
+    font-size:35px;
+}
+
+nav ul li{
+    margin: 15px;
+    list-style-type: none;
+    background-color: rgb(99, 38, 38) ;
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(80, 25, 233);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+
+main{
+    grid-area: main;
+}
+
+
+.parrafo{
+    display: none;
+    text-align: justify;
+    padding: 10px;
+
+}
+/*
+.menu div h2{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(185, 184, 184);
+    color:whitesmoke ;
+}
+*/
+
+form{
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.5);
+    color:black; 
+    border: 10px solid ;   
+}
+
+form fieldset{
+    border: 5px dashed;
+}
+
+.pilot{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+form div {
+    margin: 10px;
+    font-size: 1em;
+
+}
+
+.videos{
+
+    gap: 20px;
+    justify-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:"tituloVideo"
+                        "video1"
+                        "video2";
+}
+
+
+.tituloVideo{
+    grid-area: tituloVideo;
+    height: 10vh;
+    margin-top: 2em;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(185, 184, 184);
+}
+
+.video1{
+    grid-area: video1;
+    justify-content: center;
+    width: 100%;
+}
+
+.video2{
+    grid-area: video2;
+    width: 100%;
+    
+}
+
+.botonEnvio {
+    margin: 15px;   
+    padding: 20px;
+    text-align: right;   
+}
+
+
+
+
+.wsp{
+    position:fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+
+footer{
+    grid-area: footer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: darkgrey;
+    padding: 10px;
+    margin-top: 200px;
+    height: 30vh;
+    flex-wrap: wrap;
+}
+
+
+footer h3, h4{
+    margin: 10px;
+    text-align: center;
+}
+
+footer p{
+    margin: 5px;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+
+
+
+
+/*estilos de cursos*/
+
+.imagen{
+    transition: 10s;
+    
+}
+.imagen:hover{
+    transform: rotate(360deg);
+}
+
+.cursosTitulo{
+    margin: 50px;
+    font-size: 2em;
+}
+
+
+
+.mainCursos{
+    height: 150vh;
+    gap: 20px 30px;
+    justify-items: center;
+    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 0.3fr);
+    grid-template-areas:"cursosTitulo"
+                        "curso1"
+                        "curso2"
+                        "curso3"
+                        "curso4";
+}
+
+.mainCursos ul, li{
+    text-decoration: dashed;
+    list-style-type: none;
+    margin: 0.3em;
+}
+
+.mainCursos ul h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+
+.cursosTitulo{
+    grid-area: cursosTitulo;
+    padding: 15px;
+    justify-content: center;
+    font-size: 1.5em;
+    background-color: rgb(185, 184, 184);
+    margin-bottom: 15px;
+}
+
+.curso1{
+    grid-area: curso1;
+    width: 100%;
+
+}
+
+
+.curso1 h2 {
+    text-align: center;
+    background-color: rgb(185, 184, 184);
+}
+
+
+
+.curso2{
+    grid-area: curso2;
+    width: 100%;
+    
+
+}
+
+.curso2 h2 {
+    text-align: center;
+    background-color: rgb(185, 184, 184);
+}
+
+
+
+.curso3{
+    grid-area: curso3;
+    width: 100%;
+
+}
+.curso3 h2 {
+    text-align: center;
+    background-color: rgb(185, 184, 184);
+    
+}
+
+
+.curso4{
+    grid-area: curso4;
+    width: 100%;
+
+}
+.curso4 h2 {
+    text-align: center;
+    background-color: rgb(185, 184, 184);
+}
+
+
+
+
+/* ESTILOS DE NUESTRA FLOTA*/
+
+.flota{
+    height: 450vh;
+    gap: 20px;
+    justify-items: center;
+    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:"aviones"
+                        "cessna"
+                        "lld"
+                        "bpg"
+                        "clh"
+                        "fcb"
+                        "cessna72"
+                        "gnz"
+                        "pipper"
+                        "pa11";
+                         
+}
+.flota ul li{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.aviones{
+    grid-area: aviones;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: rgb(185, 184, 184);
+    margin-bottom: 15px;
+
+}
+
+.cessna{
+    grid-area: cessna;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    background-color: rgb(185, 184, 184);
+    margin-bottom: 15px;
+}
+
+.lld{
+    grid-area: lld;
+    width: 100%;
+    
+}
+
+.bpg{
+    grid-area: bpg;
+    width: 100%;
+}
+
+.clh{
+    grid-area: clh;
+    width: 100%;
+}
+
+.fcb{
+    grid-area: fcb;
+    width: 100%;
+}
+
+.cessna72{
+    grid-area: 72;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    background-color: rgb(185, 184, 184);
+    margin: 25px;
+    width: 100%;
+}
+
+.gnz{
+    grid-area: gnz;
+    width: 100%;
+}
+
+.pipper{
+    grid-area: pipper;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    background-color: rgb(185, 184, 184);
+    margin: 25px;
+    width: 100%;
+}
+
+.pa11{
+    grid-area: pa11;
+    width: 100%;
+}
+
+
+.delta{
+    transition: 2s;
+}
+
+.delta:hover{
+    transform: scale(1.5);
+}
+
+.golf{
+    transition: 2s;
+}
+
+.golf:hover{
+    transform: scale(1.5);
+}
+
+.hotel{
+    transition: 2s;
+}
+
+.hotel:hover{
+    transform: scale(1.5);
+}
+
+.bravo{
+    transition: 2s;
+}
+
+.bravo:hover{
+    transform: scale(1.5);
+}
+
+.november{
+    transition: 2s;
+}
+
+.november:hover{
+    transform: scale(1.5);
+}
+
+.julian{
+    transition: 2s;
+}
+
+.julian:hover{
+    transform: scale(1.5);
+}
+
+/*QUERY*/
+
+
+
+@media screen and (min-width: 720px) {
+
+    .parrafo{
+        display: block;
+        justify-content: center;
+        padding: 10px;
+        flex-flow: wrap;
+    
+    }
+
+    .videos{
+        gap: 20px;
+        justify-items: center;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:"tituloVideo tituloVideo"
+                            "video1 video2";
+    }
+
+    
+
+    .mainCursos{
+        height: 100vh;
+        gap: 20px 30px;
+        justify-items: center;
+        
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 0.3fr);
+        grid-template-areas:"cursosTitulo cursosTitulo"
+                            "curso1 curso2"
+                            "curso3 curso4";
+    }
+
+/*PROFE SE ME COMPLICO ACA PARA PONER EN EL HTML "NUESTRA FLOTA" EN UNA COLUMNA DOS AVIONES NOSE SI ES POR LA IMAGEN DEL AVION QUE NO ME FUNCIONA ME PODES DAR UNA MANO? GRACIAS!!!!!!!
+*/
+
+
+    .flota{
+        
+        width: 100%;
+        gap: 20px;
+        justify-items: center;
+        
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8, 0.3fr);
+        grid-template-areas:"aviones aviones"
+                            "cessna cessna"
+                            "lld bpg"
+                            "clh fcb"
+                            "cessna72 cessna72"
+                            "gnz gnz"
+                            "pipper pipper"
+                            "pa11 pa11";
+                             
+    }
+
+
+
+
+   
+}
+
+
+
+
